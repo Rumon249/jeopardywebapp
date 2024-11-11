@@ -16,7 +16,7 @@
 	<?php 
 		$continue = true;
 		
-		if ($file = fopen("users.txt", "r")) {
+		if ($file = fopen("users.txt", "a")) {
 			while(!feof($file)) {
 				$line = fgets($file);
 			    if (explode(",", $line)[0] == $_POST["name"])
